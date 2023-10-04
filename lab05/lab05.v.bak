@@ -1,0 +1,19 @@
+module lab05(clk, rst, seg);
+input	 clk;
+input	 rst;
+output [7:0]seg;
+reg [3:0]led;
+
+always@(posedge xlhz_clk or negedge rst)
+begin
+	if(!rst)
+		led<=0;
+	else if(led==6)
+		led<=0;
+	else
+		a<=a+1;
+end
+div_clk		(.clk(), .rst(), .clk_1hz());
+seven_seg 	(.clk(), .seg_number(), .seg_data());
+
+endmodule 
